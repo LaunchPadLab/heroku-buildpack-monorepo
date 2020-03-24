@@ -15,7 +15,7 @@ fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 (
-    cp -r "${BUILD_DIR}/${APP_BASE}" "${BUILD_DIR}"
+    cp -r "${BUILD_DIR}/${APP_BASE}/." "${BUILD_DIR}"
 )
 
 if [ $? -ne 0 ]; then
@@ -25,3 +25,4 @@ fi
 
 echo "Copied ${APP_BASE} to root of app successfully" | indent
 
+ls "${BUILD_DIR}"
