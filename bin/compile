@@ -15,8 +15,7 @@ fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 (
-    mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
-    mv "${STAGE}/$(basename "$APP_BASE")" "${BUILD_DIR}"
+    mv -R "${BUILD_DIR}/${APP_BASE}" "${BUILD_DIR}"
 )
 
 if [ $? -ne 0 ]; then
