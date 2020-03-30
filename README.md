@@ -1,3 +1,7 @@
+*LPL fork: does not clear the build directory when copying the folder in. This allows us to maintain dependencies on other directories in the repo.*
+
+---
+
 # Heroku Multi Procfile buildpack
 
 Imagine you have a single code base, which has a few different applications within it... or at least the ability to run a few different applications. Or, maybe you're Google with your mono repo?
